@@ -38,9 +38,9 @@ const MeetPlayers = () => {
               <HomeCards show={show} />
             </div>
             <div className="home_text_wrapper">
-              <div>{showTextTag("Meet")}</div>
-              <div>{showTextTag("The")}</div>
-              <div>{showTextTag("Players")}</div>
+              <div className="text-tag">{showTextTag("Meet")}</div>
+              <div className="text-tag">{showTextTag("The")}</div>
+              <div className="text-tag">{showTextTag("Players")}</div>
               <div>
                 <Tag
                   bck="#ffffff"

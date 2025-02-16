@@ -68,13 +68,12 @@ const Enroll = () => {
               <CircularProgress color="secondary" className="progress" />
             ) : (
               <button type="submit" style={{ cursor: "pointer" }}>
-                Enroll
+                Subscribe
               </button>
             )}
 
             <div className="enroll_discl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Subscribe now to receive the latest news for your favourite team!
             </div>
           </div>
         </form>

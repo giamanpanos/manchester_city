@@ -346,6 +346,9 @@ footer .footer_discl {
   padding-left: 10px;
   font-weight: 300;
   color: #5e5e5e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .block_wraper.nfo div {
@@ -720,4 +723,35 @@ footer .footer_discl {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Laptop */
+/* Home */
+@media only screen and (max-width: 1366px) {
+  .match_block .match_wrapper .match_top .left .icon,
+  .match_block .match_wrapper .match_bottom .left .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .match_block .match_wrapper .match_top .left .team_name,
+  .match_block .match_wrapper .match_bottom .left .team_name {
+    font-size: 25px;
+  }
+
+  .match_block .match_wrapper .match_top .left,
+  .match_block .match_wrapper .match_bottom .left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .home_meetplayers .home_text_wrapper .text-tag > div {
+    font-size: 70px !important;
+  }
+
+  /*The Team*/
+  .player_card_wrapper .player_card_number {
+    font-size: 120px;
+    line-height: 110px;
+  }
 }

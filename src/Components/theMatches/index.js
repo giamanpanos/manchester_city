@@ -66,7 +66,7 @@ const TheMatches = () => {
       ...state,
       filterMatches: result === "All" ? matches : list,
       playedFilter: "All",
-      resultFilter: "result",
+      resultFilter: result,
     });
   };
 

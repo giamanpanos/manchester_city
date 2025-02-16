@@ -27,9 +27,11 @@ const Header = ({ user }) => {
         <Link to="/the_matches">
           <Button color="inherit">Matches</Button>
         </Link>
-        <Link to="/log_in">
-          <Button color="inherit">Log In</Button>
-        </Link>
+        {!user && (
+          <Link to="/log_in">
+            <Button color="inherit">Log In</Button>
+          </Link>
+        )}
 
         {user && (
           <>
