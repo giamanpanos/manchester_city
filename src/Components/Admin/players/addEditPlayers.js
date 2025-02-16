@@ -1,4 +1,4 @@
-import React, { useState, UseEffect, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import AdminLayout from "../../../Hoc/AdminLayout";
 
 import { useFormik } from "formik";
@@ -11,17 +11,17 @@ import {
   selectErrorHelper,
   selectIsError,
 } from "../../Utils/tools";
-import Fileuploader from "../../Utils/fileUploader";
+// import Fileuploader from "../../Utils/fileUploader";
 import DisplayImage from "../../Utils/DisplayImageMine";
 
 import {
   TextField,
+  Input,
   Select,
   MenuItem,
   FormControl,
   Button,
 } from "@material-ui/core";
-import { Menu, ThumbUp } from "@material-ui/icons";
 import { addPlayer } from "../../../firebase";
 
 import { db } from "../../../firebase";
@@ -138,14 +138,21 @@ const AddEditPlayers = (props) => {
             {formType === "add" ? (
               <>
                 <FormControl error={selectIsError(formik, "image")}>
-                  <Fileuploader
+                  {/* <Fileuploader
                     dir="players"
                     defaultImg={defaultImg} // image url
                     defaultImgName={formik.values.image} // name of file
                     filename={(filename) => updateImageName(filename)}
                     resetImage={() => resetImage()}
                   />
-                  {selectErrorHelper(formik, "image")}
+                  {selectErrorHelper(formik, "image")} */}
+                  <Input
+                    type="file"
+                    id="filename"
+                    name="filename"
+                    style={{ border: "none" }}
+                    resetImage={() => resetImage()}
+                  />
                 </FormControl>
                 <hr />
               </>

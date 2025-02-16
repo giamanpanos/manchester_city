@@ -1,3 +1,5 @@
+//"react-firebase-file-uploader": "^2.4.4", -> this was removed from package.json as i is not compatible with firebase
+
 import React, { Component } from "react";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import FileUploader from "react-firebase-file-uploader";
@@ -57,7 +59,6 @@ class Fileuploader extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div>
         {!this.state.fileURL ? (
