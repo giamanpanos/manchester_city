@@ -21,9 +21,13 @@ import {
 } from "@material-ui/core";
 
 import { addMatch, db } from "../../../firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
-const { collection, getDocs } = require("firebase/firestore");
+import {
+  doc,
+  getDoc,
+  getDocs,
+  collection,
+  updateDoc,
+} from "firebase/firestore";
 
 const defaultValues = {
   date: "",
@@ -153,7 +157,7 @@ const AddEditMatch = (props) => {
       // edit
       try {
         async function getTeam() {
-          const docRef = doc(db, "teams", param);
+          const docRef = doc(db, "matches", param);
           const docSnap = await getDoc(docRef);
           if (docSnap.data()) {
             setFormType("edit");
